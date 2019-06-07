@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<<<<<<< HEAD
   <!-- Theme CSS -->
   <link href="css/freelancer.min.css" rel="stylesheet">
 <title>로그인 페이지</title>
@@ -104,5 +105,40 @@
       </div>
     </div>
   </footer>
+=======
+<title>로그인 페이지</title>
+<script type="text/javascript">
+	function login(){
+		document.form.submit();
+	}
+	
+	function cancel(){
+		document.form.reset();
+	}	
+</script>
+</head>
+<body>
+	<form action="login.do" method="post" name="form">
+		<table class="table table-striped table-bordered table-hover">
+			<caption style="text-align:center">로그인</caption>
+			<tr>
+				<th>ID</th> 
+				<th><input type="text" name="id" /></th>
+			</tr>
+			<tr>
+				<th>PW</th>
+				<th><input type="password" name="password" /></th>
+			</tr>
+			<tr>
+				<th></th>
+				<th>
+					<input type="button" class="btn btn-primary" value="로그인" onClick="login()" />
+					<input type="button" class="btn btn-secondary" value="취소" onClick="cancel()" />
+					<input type="button" class="btn btn-success" value="회원가입" onClick="window.location='loginform.jsp'" />
+				</th>
+			</tr>
+		</table>
+	</form>
+>>>>>>> refs/remotes/origin/master
 </body>
 </html>

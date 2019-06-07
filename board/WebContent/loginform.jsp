@@ -58,7 +58,11 @@ function writeCheck()
 		<th><input type="text" name="name"></th>
 	</tr>
 	<tr>	
+<<<<<<< HEAD
 		<th>SCHOOL NUM</th>
+=======
+		<th>SCHOLL NUM</th>
+>>>>>>> refs/remotes/origin/master
 		<th><input type="text" name="Snum"></th>
 	</tr>	
 	<tr>

@@ -8,7 +8,11 @@
 </head>
 <body>
 <script>
+<<<<<<< HEAD
    self.window.alert("회원가입을 축하합니다.");
+=======
+   self.window.alert("회원가입을 축하합니다!");
+>>>>>>> refs/remotes/origin/master
    location.href="main.jsp"; 
 
 </script>
