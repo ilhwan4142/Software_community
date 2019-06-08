@@ -97,8 +97,6 @@ $(document).ready(function(){
     </div>
   </nav>
 
-
-
 	<div style="text-align:right">
 		사용자ID : ${id} <input type=button class="btn btn-warning" value="로그아웃" OnClick="window.location='logout.do'">
 	</div>
@@ -108,7 +106,7 @@ $(document).ready(function(){
 		<!--  	<caption style="text-align:center">게시판 작성</caption> -->
 			<tr >
 				<th>글번호</th>
-				<td >글번호</td>
+				<td>글번호</td>
 			
 				<th>카테고리</th>
 				<td >    

@@ -18,7 +18,7 @@ public class ControllerAction extends HttpServlet {
  
     }
  
-    // properties 연결
+    // properties ?�결
     private void loadProperties(String path) {
  
         ResourceBundle rbHome = ResourceBundle.getBundle(path);

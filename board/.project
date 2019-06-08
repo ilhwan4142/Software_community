@@ -33,4 +33,46 @@
 		<nature>org.eclipse.jdt.core.javanature</nature>
 		<nature>org.eclipse.wst.jsdt.core.jsNature</nature>
 	</natures>
+	<linkedResources>
+		<link>
+			<name>WebContent/META-INF</name>
+			<type>2</type>
+			<locationURI>PARENT-3-PROJECT_LOC/eclipse-workspace/%EC%A0%84%ED%94%84_%EB%B3%B4%EB%93%9Cdb%ED%95%98%EB%82%98/WebContent/META-INF</locationURI>
+		</link>
+		<link>
+			<name>WebContent/WEB-INF</name>
+			<type>2</type>
+			<locationURI>PARENT-3-PROJECT_LOC/eclipse-workspace/%EC%A0%84%ED%94%84_%EB%B3%B4%EB%93%9Cdb%ED%95%98%EB%82%98/WebContent/WEB-INF</locationURI>
+		</link>
+		<link>
+			<name>WebContent/css</name>
+			<type>2</type>
+			<locationURI>PARENT-3-PROJECT_LOC/eclipse-workspace/%EC%A0%84%ED%94%84_%EB%B3%B4%EB%93%9Cdb%ED%95%98%EB%82%98/WebContent/css</locationURI>
+		</link>
+		<link>
+			<name>WebContent/doc</name>
+			<type>2</type>
+			<locationURI>PARENT-3-PROJECT_LOC/eclipse-workspace/%EC%A0%84%ED%94%84_%EB%B3%B4%EB%93%9Cdb%ED%95%98%EB%82%98/WebContent/doc</locationURI>
+		</link>
+		<link>
+			<name>WebContent/fonts</name>
+			<type>2</type>
+			<locationURI>PARENT-3-PROJECT_LOC/eclipse-workspace/%EC%A0%84%ED%94%84_%EB%B3%B4%EB%93%9Cdb%ED%95%98%EB%82%98/WebContent/fonts</locationURI>
+		</link>
+		<link>
+			<name>WebContent/js</name>
+			<type>2</type>
+			<locationURI>PARENT-3-PROJECT_LOC/eclipse-workspace/%EC%A0%84%ED%94%84_%EB%B3%B4%EB%93%9Cdb%ED%95%98%EB%82%98/WebContent/js</locationURI>
+		</link>
+		<link>
+			<name>WebContent/scss</name>
+			<type>2</type>
+			<locationURI>PARENT-3-PROJECT_LOC/eclipse-workspace/%EC%A0%84%ED%94%84_%EB%B3%B4%EB%93%9Cdb%ED%95%98%EB%82%98/WebContent/scss</locationURI>
+		</link>
+		<link>
+			<name>WebContent/vendor</name>
+			<type>2</type>
+			<locationURI>PARENT-3-PROJECT_LOC/eclipse-workspace/%EC%A0%84%ED%94%84_%EB%B3%B4%EB%93%9Cdb%ED%95%98%EB%82%98/WebContent/vendor</locationURI>
+		</link>
+	</linkedResources>
 </projectDescription>

@@ -1,5 +1,5 @@
 /**
- * ê¸€ì„ ì‘ì„± í•˜ê³  ë°ì´í„°ë² ì´ìŠ¤ì— ë„£ëŠ” Action
+ * ê¸??? ???? ??ê³? ?°ì?´í?°ë??´ì?¤ì?? ?£ë?? Action
  */
 package com.board.action;
  
@@ -24,7 +24,7 @@ public class WriteAction implements CommandAction {
     HttpServletResponse response) throws Throwable {
     	
     	request.setCharacterEncoding("euc-kr");
-    	//ì œëª©ê³¼ ë‚´ìš©ì„ ì…ë ¥ ë°›ì•„ ë³€ìˆ˜ì— ì €ì¥
+    	//??ëª©ê³¼ ?´ì?©ì?? ???? ë°??? ë³????? ????
     	String subject = request.getParameter("subject");
     	String content = request.getParameter("content");
     	String category = request.getParameter("category");
@@ -39,7 +39,7 @@ public class WriteAction implements CommandAction {
     	
     	try{
     		HttpSession session = request.getSession();
-    		//ì„¸ì…˜ì„ ì½ì–´ ë¡œê·¸ì¸ ìƒíƒœê°€ ì•„ë‹ˆë©´ ë¡œê·¸ì¸ ì°½ìœ¼ë¡œ ì´ë™
+    		//?¸ì???? ?½ì?? ë¡?ê·¸ì?? ????ê°? ????ë©? ë¡?ê·¸ì?? ì°½ì?¼ë? ?´ë??
         	id = (String) session.getAttribute("id");
     		if( id == null){
     			return "loginerror.jsp";
@@ -59,7 +59,7 @@ public class WriteAction implements CommandAction {
     				pstmt.setString(2, subject);
     				pstmt.setString(3, content);
     				pstmt.setString(4, category);
-    				//ì¿¼ë¦¬ ì‹¤í–‰
+    				//ì¿¼ë¦¬ ?¤í??
     				pstmt.executeUpdate();
     			
     				

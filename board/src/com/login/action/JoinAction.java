@@ -1,5 +1,5 @@
 /**
- * ì‚¬ìš©ì íšŒì›ê°€ì…ì‹œ ì…ë ¥í•˜ëŠ” Action
+ * ?¬ì?©ì?? ????ê°????? ???¥í???? Action
  * 
  */
 package com.login.action;
@@ -23,16 +23,16 @@ public class JoinAction implements CommandAction {
     	
     	request.setCharacterEncoding("euc-kr");
     	
-    	//loginformìœ¼ë¡œ ë¶€í„° ê°’ì„ ì…ë ¥ë°›ëŠ” ë¶€ë¶„    	
+    	//loginform?¼ë? ë¶??? ê°??? ???¥ë??? ë¶?ë¶?    	
 		String id = request.getParameter("id");
     	String password = request.getParameter("password");
     	String name = request.getParameter("name");
     	String Snum = request.getParameter("Snum");
     	
-    	//mysql ë°ì´í„°ë² ì´ìŠ¤ì— ì ‘ì†í•˜ëŠ” í´ë˜ìŠ¤ ë“œë¼ì´ë²„ ì„ ì–¸
+    	//mysql ?°ì?´í?°ë??´ì?¤ì?? ???????? ?´ë???? ???¼ì?´ë? ????
     	Class.forName("com.mysql.cj.jdbc.Driver");
     	
-    	//ë°ì´í„° ë² ì´ìŠ¤ ì—°ê²° ê´€ë ¨ ë³€ìˆ˜ ì„ ì–¸
+    	//?°ì?´í?? ë²??´ì?? ?°ê²° ê´??? ë³??? ????
     	Connection conn = null;
     	PreparedStatement pstmt = null;    	
     	
@@ -43,10 +43,10 @@ public class JoinAction implements CommandAction {
 			String dbUser = "root";
 			String dbPass = "root";
     		
-			//ë°ì´í„°ë² ì´ìŠ¤ì— ì—°ê²°
+			//?°ì?´í?°ë??´ì?¤ì?? ?°ê²°
 			conn = DriverManager.getConnection(jdbcDriver, dbUser, dbPass);
     		
-			//ê° ?ì— í•´ë‹¹í•˜ëŠ” ë³€ìˆ˜ë“¤ì„ ë„£ì–´ì¤€ë‹¤.
+			//ê°? ??? ?´ë?¹í???? ë³????¤ì?? ?£ì?´ì???.
       		pstmt = conn.prepareStatement(
     				"insert into usr values(?,?,?,?,now())");
     				pstmt.setString(1, id);
@@ -54,10 +54,10 @@ public class JoinAction implements CommandAction {
     				pstmt.setString(3, name);
     				pstmt.setString(4, Snum);
     				
-    		// pstmtì— ì €ì¥ëœ ì¿¼ë¦¬ ì‹¤í–‰
+    		// pstmt?? ???¥ë?? ì¿¼ë¦¬ ?¤í??
     				pstmt.executeUpdate();
     		
-    		//ë¡œê·¸ì¸ ê´€ë ¨ ì„¸ì…˜ ì„ ì–¸
+    		//ë¡?ê·¸ì?? ê´??? ?¸ì?? ????
     		HttpSession session = request.getSession();
     		
     		session.setAttribute("id", id);	
@@ -65,8 +65,8 @@ public class JoinAction implements CommandAction {
     	} catch(SQLException ex){
 			ex.printStackTrace();
 		}finally{
-			/*ë°ì´í„° ë² ì´ìŠ¤ì— ì ‘ì†í•˜ê³  ë‚˜ì„œ ë°ì´í„° ë² ì´ìŠ¤ ì—°ê²°ì„ ëŠì–´ì¤€ë‹¤
-			  ì•ˆê·¸ëŸ´ ê²½ìš° ìì›ì˜ ë‚­ë¹„ê°€ ë°œìƒ
+			/*?°ì?´í?? ë²??´ì?¤ì?? ??????ê³? ???? ?°ì?´í?? ë²??´ì?? ?°ê²°?? ???´ì???
+			  ??ê·¸ë?? ê²½ì?? ?????? ??ë¹?ê°? ë°???
 			*/
     		if(pstmt != null) try{pstmt.close();} catch(SQLException ex){}
     		if(conn != null) try{conn.close();} catch(SQLException ex){}

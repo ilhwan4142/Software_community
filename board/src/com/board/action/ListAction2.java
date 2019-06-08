@@ -49,7 +49,7 @@ public class ListAction2 implements CommandAction {
     		String query = null; 
     		
     		if(opt == null){    			
-    			query =  "select * from board1  where category=2 order by num";
+    			query = "select * from board1  where category=2 order by num";
     		}else if(opt.equals("0")){    			
     			query = "select * from board2 where subject like '%"+condition+"%' order by num";        		
     		}else if(opt.equals("1")){    			
