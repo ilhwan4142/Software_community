@@ -28,6 +28,39 @@ function writeCheck()
  {
  	 frm.optionValue.value = frm.selectBox.options[frm.selectBox.selectedIndex].value;
  }
+ function readURL(input) {
+		if (input.files && input.files[0]) {
+
+			var reader = new FileReader();
+
+			reader.onload = function(e) {
+				$('.image-upload-wrap').hide();
+
+				$('.file-upload-image').attr('src', e.target.result);
+				$('.file-upload-content').show();
+
+				$('.image-title').html(input.files[0].name);
+			};
+
+			reader.readAsDataURL(input.files[0]);
+
+		} else {
+			removeUpload();
+		}
+	}
+
+
+	function removeUpload() {
+		$('.file-upload-input').replaceWith($('.file-upload-input').clone());
+		$('.file-upload-content').hide();
+		$('.image-upload-wrap').show();
+	}
+	$('.image-upload-wrap').bind('dragover', function() {
+		$('.image-upload-wrap').addClass('image-dropping');
+	});
+	$('.image-upload-wrap').bind('dragleave', function() {
+		$('.image-upload-wrap').removeClass('image-dropping');
+	});
  </script>
  <script type="text/javascript">
 
@@ -136,17 +169,14 @@ $(document).ready(function(){
 			<tr>
 				<th>Ã·ºÎÆÄÀÏ</th>
 				<td colspan="3"><div class="form-group">
-					<label for="InputSubject1"></label>
-					<input id="fileInput" filestyle="" type="file" data-class-button="btn btn-default" data-class-input="form-control" data-button-text="" data-icon-name="fa fa-upload" class="form-control" tabindex="-1" style="position: absolute; clip: rect(0px 0px 0px 0px);">				
-					<div class="bootstrap-filestyle input-group">			
-						<input type="text" id="userfile" class="form-control" name="userfile" disabled="">				
-						<span class="group-span-filestyle input-group-btn" tabindex="0">				
-							<label for="fileInput" class="btn btn-default ">				
-							<span class="glyphicon fa fa-upload"></span>				
-							</label>				
-						</span>				
-					</div>				
+				<br style="clear:both;"/>
+				<div class="file-upload">
+					<div class="image-upload-wrap">
+						<input class="file-upload-input" type='file'
+							onchange="readURL(this);" accept="image/*" name="img" required />
+					</div>
 				</div>
+				<br style="clear:both;"/>
 				</td>
 			</tr>
 			<tr>

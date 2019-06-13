@@ -28,6 +28,7 @@ public class WriteAction implements CommandAction {
     	String subject = request.getParameter("subject");
     	String content = request.getParameter("content");
     	String category = request.getParameter("category");
+    	String img = request.getParameter("img");
     	
     	String id = null;
     	String query=null;
@@ -54,11 +55,12 @@ public class WriteAction implements CommandAction {
 			conn = DriverManager.getConnection(jdbcDriver, dbUser, dbPass);
 			
       		pstmt = conn.prepareStatement(      				
-      				"insert into board1 values(NULL,?,?,?,now(),0,?)");
+      				"insert into board1 values(NULL,?,?,?,now(),0,?,?)");
     				pstmt.setString(1, id);
     				pstmt.setString(2, subject);
     				pstmt.setString(3, content);
     				pstmt.setString(4, category);
+    				pstmt.setString(5, img);
     				//ì¿¼ë¦¬ ?¤í??
     				pstmt.executeUpdate();
     			

@@ -55,7 +55,7 @@ function writeCheck()
 		</tr>	
 		<tr>
 			<td>내용</td>
-			<td style="text-align:left">${article.content}</td>						
+			<td style="text-align:left"><img src="${article.img}" alt="" width="250" height="150" />${article.content}</td>						
 		</tr>
 		
 	</table>

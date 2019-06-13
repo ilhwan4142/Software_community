@@ -13,6 +13,7 @@ public class board {//계층간 데이터 교환을 위한 자바빈즈
 	//아이디
 	private String id;
 	
+	private String img;
 	//이메일
 	//private String Snum;
 	
@@ -67,7 +68,12 @@ public class board {//계층간 데이터 교환을 위한 자바빈즈
 	public void setId(String id) {
 		this.id = id;
 	}
-
+	public String getImg() {
+		return img;
+	}
+	public void setImg(String img) {
+		this.img = img;
+	}
 	public String getBoarddate() {
 		return boarddate;
 	}

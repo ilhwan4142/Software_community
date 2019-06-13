@@ -67,6 +67,7 @@ public class ContentAction implements CommandAction {
     			article.setId(rs.getString("id"));
     			article.setBoarddate(rs.getString("boarddate"));
     			article.setCategory(rs.getInt("category"));
+    			article.setImg(rs.getString("img"));
     			score = Integer.parseInt(rs.getString("score")) + 1;
     			article.setScore(String.valueOf(score));
     			//article.setEmail(rs.getString("email"));

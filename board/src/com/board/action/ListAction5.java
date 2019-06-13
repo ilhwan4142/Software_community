@@ -73,6 +73,7 @@ public class ListAction5 implements CommandAction {
     			article.setBoarddate(rs.getString("boarddate"));
     			article.setScore(rs.getString("score"));
     			article.setCategory(rs.getInt("category"));
+    			article.setImg(rs.getString("img"));
     			articleList.add(article);
     			
     		}
